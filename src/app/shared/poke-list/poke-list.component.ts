@@ -17,6 +17,7 @@ export class PokeListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+     
     this.pokeApiService.apiListPokemons.subscribe(
       res => {
         this.setAllPokemons = res.results;
@@ -24,13 +25,17 @@ export class PokeListComponent implements OnInit {
 
       }
     )
+
+
   }
 
   public getsearch(value:string){
     const filter = this.setAllPokemons.filter((res: any) => {
-        return !res.name.indexOf(value.toLowerCase())
+        return !res.name.indexOf(value.toLowerCase());
     })
     this.getAllPokemons = filter;
   }
+
+  
 
 }
