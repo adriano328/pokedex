@@ -1,0 +1,14 @@
+@use './config-scss/variable.scss';
+@use './config-scss/reset.scss';
+@use './config-scss/rem-calc.scss';
+
+html{
+    font-family: robo;
+    background: #262835;
+}
+
+main{
+    max-width: rem-calc(600);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
