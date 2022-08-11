@@ -1,16 +1,20 @@
-<ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
-    <a [routerLink]="['details', pokemon?.stuats?.id]" routerLinkActive="router-link-active"  class="pokemon">
-        <section class="pokemon__status">
-         <h2>
-             {{ pokemon.name }} 
-         </h2>
-         <ul>
-             <li *ngFor="let value of pokemon?.stuats?.types">{{value?.type?.name}}</li>
-         </ul>
-        </section>
-        <section class="pokemon__image">
-             <img [src]="pokemon?.stuats?.sprites.other.dream_world.front_default" alt="pokemon.name">
-        </section>
-     </a>
-</ng-template>
+<poke-search (emmitSearch)="getsearch($event)"></poke-search>
+<section class="listagem">
+    <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+        <a [routerLink]="['details', pokemon?.stuats?.id]" routerLinkActive="router-link-active"  class="pokemon">
+            <section class="pokemon__status">
+             <h2>
+                 {{ pokemon.name }} 
+             </h2>
+             <ul>
+                 <li *ngFor="let value of pokemon?.stuats?.types">{{value?.type?.name}}</li>
+             </ul>
+            </section>
+            <section class="pokemon__image">
+                 <img [src]="pokemon?.stuats?.sprites.other.dream_world.front_default" alt="pokemon.name">
+            </section>
+         </a>
+    </ng-template>
+</section>
+
 
