@@ -1,0 +1,19 @@
+@import './config-scss/variable.scss';
+@import  './config-scss/reset.scss';
+@import  './config-scss/rem-calc.scss';
+
+html{
+    font-family: robo;
+    background: #262835;
+}
+
+main{
+    width: rem-calc(600);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+*{
+    font-family:  Roboto;
+}
+
