@@ -11,7 +11,9 @@ describe('PokeSearchComponent', () => {
       declarations: [ PokeSearchComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(PokeSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
